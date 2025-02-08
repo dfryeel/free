@@ -1,0 +1,9 @@
+torch==1.13.1
+torchvision==0.14.1
+numpy==1.24.2
+Pillow==9.4.0
+argparse==1.4.0
+logging==0.5.1.2
+torchsummary==1.5.1
+tqdm==4.64.0
+cv2==4.6.0
