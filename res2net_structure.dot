@@ -1,0 +1,40 @@
+// Res2Net
+digraph {
+	input [label="Input (3, H, W)"]
+	conv1 [label="Conv1 (32, H/2, W/2)"]
+	input -> conv1
+	bn1 [label="BN1 (32, H/2, W/2)"]
+	conv1 -> bn1
+	relu1 [label="ReLU1 (32, H/2, W/2)"]
+	bn1 -> relu1
+	conv2 [label="Conv2 (32, H/2, W/2)"]
+	relu1 -> conv2
+	bn2 [label="BN2 (32, H/2, W/2)"]
+	conv2 -> bn2
+	relu2 [label="ReLU2 (32, H/2, W/2)"]
+	bn2 -> relu2
+	conv3 [label="Conv3 (64, H/2, W/2)"]
+	relu2 -> conv3
+	bn3 [label="BN3 (64, H/2, W/2)"]
+	conv3 -> bn3
+	relu3 [label="ReLU3 (64, H/2, W/2)"]
+	bn3 -> relu3
+	maxpool [label="MaxPool (64, H/4, W/4)"]
+	relu3 -> maxpool
+	layer1 [label="Layer1 (64, H/4, W/4)"]
+	maxpool -> layer1
+	layer2 [label="Layer2 (128, H/8, W/8)"]
+	layer1 -> layer2
+	layer3 [label="Layer3 (256, H/16, W/16)"]
+	layer2 -> layer3
+	layer4 [label="Layer4 (512, H/32, W/32)"]
+	layer3 -> layer4
+	output1 [label="Output1 (64, H/4, W/4)"]
+	layer1 -> output1
+	output2 [label="Output2 (128, H/8, W/8)"]
+	layer2 -> output2
+	output3 [label="Output3 (256, H/16, W/16)"]
+	layer3 -> output3
+	output4 [label="Output4 (512, H/32, W/32)"]
+	layer4 -> output4
+}
