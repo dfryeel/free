@@ -2,11 +2,12 @@
 This repository contains the implementation of a deep learning model using PyTorch, designed for feature extraction and enhancement through convolutional layers, attention mechanisms, and pixel shuffle upsampling. The model integrates a custom encoder with several convolutional and attention layers, specifically targeting computer vision tasks.
 ## Overview
 ![image](network1.drawio.png)
-![image](MHA.drawio.png)
-![image](TDM.drawio.png)
+
 The core architecture is composed of:
 - **Multi-Head Agent Attention (MHA)**: A bidirectional attention mechanism augmented by agent tokens and positional biases to enhance local feature discriminability while modeling cross-region dependencies.
+  ![image](MHA.drawio.png)
 - **Top-k Dynamic Mask (TDM)**: A computationally efficient module that employs dynamic multi-scale masking and top-k selection to prioritize salient features across varying resolutions, reducing redundancy in attention computation.
+  ![image](TDM.drawio.png)
 - **Deeply Supervised Hybrid Loss**: A boundary-aware optimization framework combining BCE and IoU losses, guided by high-level semantic cues to refine edge details and suppress false positives.
 
 ## Prerequisites
